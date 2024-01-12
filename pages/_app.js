@@ -40,11 +40,11 @@ export default function App({ Component, pageProps }) {
   }
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      setUser({value:token})
-      setKey(Math.random())
-    }
+   const token = localStorage.getItem('token');
+  if (token !== null) {
+    setUser({ value: token })
+    setKey(Math.random())
+  }
 
   }, [router.query]);
   
