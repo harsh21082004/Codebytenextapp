@@ -7,9 +7,9 @@ import { MenuContext } from './context/menuContext';
 import { MdAccountCircle } from "react-icons/md";
 
 
-const Navbar = ({user,logout}) => {
+const Navbar = ({/*user,*/logout}) => {
 
-  const [isLoggedIN, setIsLoggedIN] = useState(user.value)
+  // const [isLoggedIN, setIsLoggedIN] = useState(user.value)
 
   const [open, setOpen] = useState(true)
 
@@ -48,7 +48,7 @@ const Navbar = ({user,logout}) => {
             <Link href="/" className={styles.containerFluid}><span className={theme === "light" ? "textpurpledark" : "textpurplelight"}><b className={`${styles.codebyte} fontBold`}>&lt;/&gt; Codebyte</b></span></Link>
             <a onMouseOver={()=>{setIsHovered(true)}}
                 onMouseLeave={()=>{setIsHovered(false)}}>
-              {user.value && (
+              {/*user.value &&*/ (
                 <>
                 <MdAccountCircle className={`${styles.account1}`} onMouseOver={()=>{setIsHovered(true)}}
                 onMouseLeave={()=>{setIsHovered(false)}} />{isHovered && <ul className={`${styles.accdrop}`} style={{ display: isHovered ? 'block' : 'none' }}>
@@ -96,10 +96,10 @@ const Navbar = ({user,logout}) => {
                 <input className={`${styles.serBox} form-control me-2`} type="search" placeholder="Search" aria-label="Search" />
                 <button className={`btn ${styles.serBtn}`} type="submit">Search</button>
               </form>
-              {!user.value && (<Link href={"/login"}><button className={` btn mx-2 ${styles.signBtn}`} type="submit">Login</button></Link>)}
+              {/*user.value &&*/(<Link href={"/login"}><button className={` btn mx-2 ${styles.signBtn}`} type="submit">Login</button></Link>)}
               <a onMouseOver={()=>{setIsHovered(true)}}
                 onMouseLeave={()=>{setIsHovered(false)}}>
-              {user.value && (
+              {/*user.value &&*/ (
                 <>
                 <MdAccountCircle className={`${styles.account}`} onMouseOver={()=>{setIsHovered(true)}}
                 onMouseLeave={()=>{setIsHovered(false)}} />{isHovered && <ul className={`${styles.accdrop}`} style={{ display: isHovered ? 'block' : 'none' }}>
