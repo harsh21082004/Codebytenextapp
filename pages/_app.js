@@ -13,7 +13,7 @@ import { motion, useViewportScroll, useTransform,useScroll } from "framer-motion
 
 export default function App({ Component, pageProps }) {
   
-  const [user, setUser] = useState({value:null})
+  const [user, setUser] = useState({value:''})
 
   const [key, setKey] = useState(0)
 
