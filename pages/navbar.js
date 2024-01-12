@@ -7,7 +7,7 @@ import { MenuContext } from './context/menuContext';
 import { MdAccountCircle } from "react-icons/md";
 
 
-const Navbar = ({user,key,logout}) => {
+const Navbar = ({user,logout}) => {
 
   const [isLoggedIN, setIsLoggedIN] = useState(user.value)
 
