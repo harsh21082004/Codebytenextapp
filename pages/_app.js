@@ -13,7 +13,7 @@ import { motion, useViewportScroll, useTransform,useScroll } from "framer-motion
 
 export default function App({ Component, pageProps }) {
   
-  const [user, setUser] = useState({value:''})
+  // const [user, setUser] = useState({value:''})
 
   const [key, setKey] = useState(0)
 
@@ -39,14 +39,14 @@ export default function App({ Component, pageProps }) {
     openHam === menu.open? setOpenHam(!menu.open):setOpenHam(menu.open)
   }
 
-  useEffect(() => {
-   const token = localStorage.getItem('token');
-  if (token !== null) {
-    setUser({ value: token })
-    setKey(Math.random())
-  }
+  // useEffect(() => {
+  //  const token = localStorage.getItem('token');
+  // if (token !== null) {
+  //   setUser({ value: token })
+  //   setKey(Math.random())
+  // }
 
-  }, [router.query]);
+  // }, [router.query]);
   
 
   useEffect(() => {
@@ -129,7 +129,7 @@ export default function App({ Component, pageProps }) {
       />
   <MenuContext.Provider value = {{openHam,toggleMenu}}>
   <ThemeContext.Provider value={{theme, handleOnClick,handleOnClick2,them}} >
-  <Navbar logout={logout} key={key} user={user} theme={theme}/>
+  <Navbar logout={logout} key={key} /*user={user}*/ theme={theme}/>
   {/* <MouseScroll/> */}
   <Component {...pageProps} />
   {/* <Footer/> */}
